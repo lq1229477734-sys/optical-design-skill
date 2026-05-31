@@ -1,4 +1,4 @@
-﻿---
+---
 name: tmm-skill
 description: Build, review, and debug transfer-matrix and Berreman optical simulations for isotropic and anisotropic multilayer films, DBRs, liquid-crystal stacks, rotated optical axes, polarization conversion, and pyllama-based thin-film workflows.
 ---
