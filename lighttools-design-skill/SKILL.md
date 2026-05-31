@@ -42,6 +42,7 @@ Use this skill to turn an optical paper or processed surface dataset into a trac
 - Read `references/lighttools-com-automation.md` for COM connection, JumpStart setup, sources, receivers, mesh export, and versioning patterns.
 - Read `references/freeform-surface-import.md` for importing two-surface freeform lenses from CSV data into FreeformSolid / Loft `.lts` models.
 - Read `references/paper-reproduction-lessons.md` for paper-specific modeling lessons: Figure 2 source/receiver reproduction, Figure 14 prism textures, DBHM stability, material inheritance, and model-debugging rules.
+- Read `references/LightTools_Macro_经验总结.md` when writing or debugging LightTools macros for parameter sweeps, object lookup by database keys, geometry/surface/pattern changes, receiver chart export, or macro-based simulation automation.
 
 ## Output Standard
 
