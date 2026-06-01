@@ -1,13 +1,13 @@
 ---
 name: lighttools-design-skill
-description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, debug LightTools model stability, version .lts outputs, or document validated optical-design workflows.
+description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, distance/geometry sweeps, angular luminance meshes, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, run colli1_lc distance scans, export BLUReceiver angular luminance data, post-process LightTools mesh TXT files, debug LightTools model stability, version .lts outputs, or document validated optical-design workflows.
 ---
 
 # LightTools Design Skill
 
 ## Overview
 
-Use this skill to turn an optical paper or processed surface dataset into a traceable LightTools model, then validate it with simulation outputs and an audit trail. The workflow is based on successful reproductions of two paper-style tasks in `D:\comsol`: a Figure 2 LED/angle-filter model with real sources and receiver meshes, and a Figure 14 Prism 3 / DBHM-style multilayer texture workflow.
+Use this skill to turn an optical paper, processed surface dataset, or local LightTools scan task into a traceable LightTools model and validated output set. The workflow is based on successful work in `D:\comsol`: Figure 2 LED/angle-filter models with receiver meshes, Figure 14 Prism 3 / DBHM-style texture debugging, 6x6 freeform LED arrays, and distance-series angular luminance sweeps.
 
 ## Workflow
 
@@ -32,7 +32,13 @@ Use this skill to turn an optical paper or processed surface dataset into a trac
    - Run a practical ray count first, export a receiver mesh or write an audit, then scale up.
    - Do not overwrite the last known-good `.lts`; use monotonically increasing suffixes.
 
-5. Preserve traceability.
+5. For scan workflows, keep model edits, simulation runs, and post-processing separate.
+   - Patch text only for properties the COM database cannot expose safely.
+   - Use COM/JumpStart for geometry `LENGTH` sweeps and receiver mesh export.
+   - Post-process exported TXT meshes with reusable scripts, not hand-edited spreadsheets.
+   - Compare hashes when model edits appear to produce unchanged results.
+
+6. Preserve traceability.
    - Copy source CSV/OBJ files into the model folder when importing surfaces.
    - Write an audit file with source paths, assumptions, object counts, LightTools statuses, and deviations from the paper.
    - Append successful commands and outputs to a project success log when one exists.
@@ -42,6 +48,7 @@ Use this skill to turn an optical paper or processed surface dataset into a trac
 - Read `references/lighttools-com-automation.md` for COM connection, JumpStart setup, sources, receivers, mesh export, and versioning patterns.
 - Read `references/freeform-surface-import.md` for importing two-surface freeform lenses from CSV data into FreeformSolid / Loft `.lts` models.
 - Read `references/paper-reproduction-lessons.md` for paper-specific modeling lessons: Figure 2 source/receiver reproduction, Figure 14 prism textures, DBHM stability, material inheritance, and model-debugging rules.
+- Read `references/distance-scan-workflow.md` for `distance.*.lts`, `colli1_lc_1` / `colli1_lc_2` sweeps, `ec_t` transmittance patches, `BLUReceiver` angular luminance mesh export, and 61x61 TXT post-processing.
 - Read `references/LightTools_Macro_经验总结.md` when writing or debugging LightTools macros for parameter sweeps, object lookup by database keys, geometry/surface/pattern changes, receiver chart export, or macro-based simulation automation.
 
 ## Output Standard
@@ -53,5 +60,6 @@ Deliver a model folder that contains:
 - Source data copies for reproducibility.
 - Receiver mesh CSV/plots or simulation summaries when a ray trace was run.
 - An audit text file naming every assumption, validation status, and known limitation.
+- For sweeps, the versioned `.lts`, scan script, raw TXT mesh outputs, processed CSV/PNG/PDF summaries, and a short hash/validation note.
 
 When LightTools is unavailable, still produce the script and raw model edits, but clearly mark validation as pending.
