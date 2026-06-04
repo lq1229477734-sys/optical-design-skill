@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zemax Skill"
+  short_description: "Automate Zemax ZOS-API optical design workflows."
+  default_prompt: "Use $zemax-skill to build, connect, optimize, and validate a Zemax optical design workflow."

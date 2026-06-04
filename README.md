@@ -43,6 +43,18 @@ flowchart LR
 
 ## Current Skills
 
+### Zemax Skill
+
+Path: [`zemax-skill/`](./zemax-skill/)
+
+This skill captures practical Zemax OpticStudio and ZOS-API experience for repeatable optical-design automation. It includes:
+
+- Standalone and Interactive Extension connection triage.
+- Sequential lens optimization workflow and custom merit-function guidance.
+- MTF, distortion, spot, wavefront, and prescription validation patterns.
+- Non-sequential component setup, detector extraction, and flux/pupil checks.
+- A reusable `zemax_connection_smoke.py` script for local ZOS-API smoke testing.
+
 ### LightTools Design Skill
 
 Path: [`lighttools-design-skill/`](./lighttools-design-skill/)
@@ -93,3 +105,4 @@ Contributions are welcome. Useful additions include:
 This is a growing workshop, not a finished product. Each skill should help an optical agent do real engineering work more reliably: understand the problem, choose the right method, automate the right tool, validate the result, and leave a clear trail for the next person.
 
 If you have experience with optical simulation, analytical modeling, fabrication constraints, or experimental validation, your notes can become part of the shared design intelligence here.
+
