@@ -1,5 +1,7 @@
 # Optical Design Skill Ecosystem
 
+![Optical Design Skill Ecosystem](./assets/readme/ecosystem-overview.svg)
+
 Codex skills for building an intelligent Optical Agent that unifies fragmented simulation software, analytical methods, and engineering experience into one cohesive design ecosystem.
 
 This repository is an early knowledge base for connecting tools such as Zemax, LightTools, FDTD solvers, transfer-matrix methods, freeform optics workflows, paper reproduction notes, and practical automation patterns. The goal is not to replace specialized optical software, but to make them work together through a shared reasoning layer, reusable workflows, and traceable design artifacts.
@@ -17,33 +19,11 @@ Modern optical design is powerful but fragmented. A single project may require:
 
 This repository collects Codex skills that help an agent move across those boundaries with memory, structure, and engineering discipline.
 
-```mermaid
-flowchart LR
-    User["Optical Designer / Researcher"]
-    Agent["Intelligent Optical Agent<br/>Codex + Skills + Project Memory"]
-
-    Zemax["Zemax<br/>Imaging and ray optics"]
-    LightTools["LightTools<br/>Illumination and macro automation"]
-    FDTD["FDTD / RCWA<br/>Wave optics and nanostructures"]
-    TMM["TMM / Berreman<br/>Multilayer and anisotropic films"]
-    Python["Python<br/>Optimization, plotting, validation"]
-    Papers["Papers and lab notes<br/>Reproduction workflows"]
-
-    Artifacts["Traceable design artifacts<br/>Models, scripts, audits, plots"]
-
-    User --> Agent
-    Agent <--> Zemax
-    Agent <--> LightTools
-    Agent <--> FDTD
-    Agent <--> TMM
-    Agent <--> Python
-    Agent <--> Papers
-    Agent --> Artifacts
-```
-
 ## Current Skills
 
 ### Zemax Skill
+
+![Zemax Skill](./assets/readme/zemax-skill.svg)
 
 Path: [`zemax-skill/`](./zemax-skill/)
 
@@ -57,6 +37,8 @@ This skill captures practical Zemax OpticStudio and ZOS-API experience for repea
 
 ### LightTools Design Skill
 
+![LightTools Design Skill](./assets/readme/lighttools-design-skill.svg)
+
 Path: [`lighttools-design-skill/`](./lighttools-design-skill/)
 
 This skill captures practical experience for reproducing optical papers and building validated Synopsys LightTools models. It includes:
@@ -68,6 +50,8 @@ This skill captures practical experience for reproducing optical papers and buil
 - LightTools macro experience for parameter sweeps, object lookup, simulation runs, and chart export.
 
 ### TMM Skill
+
+![TMM Skill](./assets/readme/tmm-skill.svg)
 
 Path: [`TMM skill/`](./TMM%20skill/)
 
@@ -105,4 +89,3 @@ Contributions are welcome. Useful additions include:
 This is a growing workshop, not a finished product. Each skill should help an optical agent do real engineering work more reliably: understand the problem, choose the right method, automate the right tool, validate the result, and leave a clear trail for the next person.
 
 If you have experience with optical simulation, analytical modeling, fabrication constraints, or experimental validation, your notes can become part of the shared design intelligence here.
-

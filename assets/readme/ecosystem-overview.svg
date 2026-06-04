@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Optical Design Skill Ecosystem</title>
+  <desc id="desc">A coordinated optical design skill ecosystem connecting Zemax, LightTools, TMM, FDTD, Python, and paper reproduction workflows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="0.55" stop-color="#eef8f6"/>
+      <stop offset="1" stop-color="#fff7ed"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2fb7b0"/>
+      <stop offset="1" stop-color="#4776d0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#31506b" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7f91"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="url(#bg)"/>
+  <path d="M80 390 C260 260 390 295 535 245 C720 181 824 102 1068 148" fill="none" stroke="#d7e6f2" stroke-width="8" stroke-linecap="round"/>
+  <path d="M100 155 C245 222 360 205 494 270 C642 341 795 362 1030 272" fill="none" stroke="#f4d5aa" stroke-width="7" stroke-linecap="round"/>
+  <g filter="url(#softShadow)">
+    <rect x="408" y="118" width="384" height="250" rx="24" fill="#ffffff"/>
+    <path d="M516 157 C482 202 482 286 516 331" fill="none" stroke="url(#lens)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M684 157 C718 202 718 286 684 331" fill="none" stroke="url(#lens)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M270 238 L508 238" stroke="#e1a23a" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M692 238 L948 172" stroke="#e1a23a" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M692 238 L948 238" stroke="#2fb7b0" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M692 238 L948 306" stroke="#4776d0" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <circle cx="600" cy="238" r="48" fill="#172033"/>
+    <text x="600" y="230" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="700">Optical</text>
+    <text x="600" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="700">Agent</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">
+    <rect x="110" y="94" width="188" height="56" rx="14" fill="#ffffff" stroke="#bfd8ec"/>
+    <text x="204" y="129" text-anchor="middle" fill="#26364a">Papers</text>
+    <rect x="116" y="220" width="188" height="56" rx="14" fill="#ffffff" stroke="#ecd1a6"/>
+    <text x="210" y="255" text-anchor="middle" fill="#26364a">Requirements</text>
+    <rect x="944" y="112" width="160" height="54" rx="14" fill="#ffffff" stroke="#f1c27b"/>
+    <text x="1024" y="146" text-anchor="middle" fill="#26364a">Zemax</text>
+    <rect x="944" y="214" width="160" height="54" rx="14" fill="#ffffff" stroke="#87d6cf"/>
+    <text x="1024" y="248" text-anchor="middle" fill="#26364a">LightTools</text>
+    <rect x="944" y="316" width="160" height="54" rx="14" fill="#ffffff" stroke="#a9c0f2"/>
+    <text x="1024" y="350" text-anchor="middle" fill="#26364a">TMM / FDTD</text>
+  </g>
+  <text x="70" y="448" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#1d2d3d">Optical Design Skill Ecosystem</text>
+  <text x="70" y="482" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#536575">Connected workflows for traceable simulation, optimization, and validation.</text>
+</svg>

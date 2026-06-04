@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Zemax Skill</title>
+  <desc id="desc">Zemax skill card showing lens automation, merit function construction, and validation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4fbff"/><stop offset="1" stop-color="#edf7f2"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f0a335"/><stop offset="1" stop-color="#37b7aa"/></linearGradient>
+  </defs>
+  <rect width="960" height="360" rx="22" fill="url(#bg)"/>
+  <g transform="translate(70 78)">
+    <path d="M0 102 L232 102" stroke="url(#beam)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M248 102 L470 44" stroke="#37b7aa" stroke-width="7" stroke-linecap="round"/>
+    <path d="M248 102 L470 102" stroke="#4776d0" stroke-width="7" stroke-linecap="round"/>
+    <path d="M248 102 L470 162" stroke="#8f7ae5" stroke-width="7" stroke-linecap="round"/>
+    <path d="M194 25 C164 78 164 126 194 178" fill="none" stroke="#2d7dd2" stroke-width="18" stroke-linecap="round"/>
+    <path d="M252 25 C282 78 282 126 252 178" fill="none" stroke="#2db7a3" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="535" cy="44" r="9" fill="#37b7aa"/><circle cx="535" cy="102" r="9" fill="#4776d0"/><circle cx="535" cy="162" r="9" fill="#8f7ae5"/>
+  </g>
+  <text x="600" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#203246">Zemax Skill</text>
+  <text x="600" y="146" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#536575">ZOS-API automation for sequential and non-sequential design.</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#26364a">
+    <rect x="600" y="184" width="240" height="34" rx="17" fill="#ffffff" stroke="#bfd8ec"/><text x="620" y="207">Connection smoke tests</text>
+    <rect x="600" y="232" width="240" height="34" rx="17" fill="#ffffff" stroke="#bfe6df"/><text x="620" y="255">Custom merit functions</text>
+    <rect x="600" y="280" width="240" height="34" rx="17" fill="#ffffff" stroke="#dbc8f2"/><text x="620" y="303">MTF and distortion validation</text>
+  </g>
+</svg>

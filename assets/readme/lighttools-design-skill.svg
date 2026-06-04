@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">LightTools Design Skill</title>
+  <desc id="desc">LightTools skill card showing illumination rays, receivers, freeform import, and macro automation.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8eb"/><stop offset="1" stop-color="#effaf7"/></linearGradient></defs>
+  <rect width="960" height="360" rx="22" fill="url(#bg)"/>
+  <g transform="translate(82 70)">
+    <rect x="0" y="52" width="90" height="90" rx="18" fill="#26364a"/>
+    <circle cx="45" cy="97" r="20" fill="#ffcf5a"/>
+    <path d="M102 74 C210 20 300 28 394 76" fill="none" stroke="#f0a335" stroke-width="7" stroke-linecap="round"/>
+    <path d="M102 96 C220 96 300 96 420 96" fill="none" stroke="#37b7aa" stroke-width="7" stroke-linecap="round"/>
+    <path d="M102 120 C220 172 306 166 394 126" fill="none" stroke="#4776d0" stroke-width="7" stroke-linecap="round"/>
+    <path d="M448 22 L500 196" stroke="#26364a" stroke-width="8" stroke-linecap="round"/>
+    <rect x="520" y="44" width="74" height="130" rx="10" fill="#ffffff" stroke="#87d6cf" stroke-width="4"/>
+    <path d="M535 60 L580 60 M535 84 L580 84 M535 108 L580 108 M535 132 L580 132 M535 156 L580 156" stroke="#d9ebe8" stroke-width="4"/>
+  </g>
+  <text x="600" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#203246">LightTools Design Skill</text>
+  <text x="600" y="145" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#536575">Illumination modeling, macro automation, and validated receivers.</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#26364a">
+    <rect x="600" y="184" width="250" height="34" rx="17" fill="#ffffff" stroke="#f1c27b"/><text x="620" y="207">COM and JumpStart workflows</text>
+    <rect x="600" y="232" width="250" height="34" rx="17" fill="#ffffff" stroke="#87d6cf"/><text x="620" y="255">Freeform surface import</text>
+    <rect x="600" y="280" width="250" height="34" rx="17" fill="#ffffff" stroke="#a9c0f2"/><text x="620" y="303">Distance scans and chart export</text>
+  </g>
+</svg>
