@@ -40,6 +40,7 @@ Load only the reference needed for the current request:
 
 - `references/zos-api-patterns.md`: Python.NET, Standalone/Interactive connection, enum/cell access, analysis export, and recurring ZOS-API pitfalls.
 - `references/optimization-workflow.md`: staged sequential-lens optimization, merit-function strategy, metrics, and lessons from failed/partial MTF pushes.
+- `references/patent-reproduction-workflow.md`: patent-to-Zemax reproduction workflow, source-truth separation, model-glass material handling, stop/reference surface choices, and US10281683-specific lessons.
 - `references/nsc-workflow.md`: non-sequential mode setup, NSCE object creation, detector extraction, and flux/pupil-validation workflow.
 
 ## Practical Defaults
@@ -48,6 +49,7 @@ Load only the reference needed for the current request:
 - On this Windows workstation, a known working OpticStudio root was `D:\Program Files\ANSYS Inc\v251\Zemax OpticStudio`; still re-detect or accept the user's path before assuming it.
 - Treat Standalone API success as the strongest signal for automation: valid app, valid license, and non-null `PrimarySystem`.
 - If Interactive Extension connects but `IsValidLicenseForAPI` is false or `PrimarySystem` is missing, switch to Standalone for batch work.
+- For patent reproductions, use Zemax Model glass solves when the patent discloses `n_d` and `V_d`; do not substitute catalog glasses unless the user asks for a manufacturable redesign.
 - Never keep optimizing only because the merit improves. Stop and reassess if MTF, distortion, track length, or clearances move away from the specification.
 
 ## Reporting Contract
