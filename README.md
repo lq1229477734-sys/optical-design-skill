@@ -1,6 +1,8 @@
 # Optical Design Skill Ecosystem
 
-![Optical Design Skill Ecosystem](./assets/readme/ecosystem-overview.svg)
+![Optical Design Skill Ecosystem](./assets/readme/ecosystem-overview-academic.svg)
+
+A publication-style method map of the repository: problem sources flow into the Codex skill layer, then into validated optical models, metrics, and audit artifacts.
 
 Codex skills for building an intelligent Optical Agent that unifies fragmented simulation software, analytical methods, and engineering experience into one cohesive design ecosystem.
 
