@@ -51,6 +51,20 @@ This skill captures practical experience for reproducing optical papers and buil
 - Prism texture and DBHM modeling lessons.
 - LightTools macro experience for parameter sweeps, object lookup, simulation runs, and chart export.
 
+### FDTD Skill
+
+![FDTD Skill](./assets/readme/fdtd-skill.svg)
+
+Path: [`FDTD-skill/`](./FDTD-skill/)
+
+This skill captures practical Ansys Lumerical FDTD automation experience for repeatable wave-optics simulation workflows. It includes:
+
+- `lumapi` startup, environment, and Windows path handling.
+- `.fsp` project and `.lsf` script execution patterns.
+- Parameter scan acceleration and safe-mode workarounds.
+- Monitor export, transmission spectrum parsing, and result plotting helpers.
+- Debugging notes for license/session issues, analysis mode, and signed transmission values.
+
 ### TMM Skill
 
 ![TMM Skill](./assets/readme/tmm-skill.svg)

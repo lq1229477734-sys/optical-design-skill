@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">FDTD Skill</title>
+  <desc id="desc">FDTD skill card showing wave optics grids, field monitors, parameter scans, and Lumerical automation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4fbff"/><stop offset="1" stop-color="#fff8eb"/></linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4267ac"/><stop offset="0.5" stop-color="#2c9c8f"/><stop offset="1" stop-color="#c88a2b"/></linearGradient>
+  </defs>
+  <rect width="960" height="360" rx="22" fill="url(#bg)"/>
+  <g transform="translate(76 54)">
+    <g opacity="0.45" stroke="#9eb6ce" stroke-width="1">
+      <path d="M0 30 H510 M0 62 H510 M0 94 H510 M0 126 H510 M0 158 H510 M0 190 H510 M0 222 H510"/>
+      <path d="M30 0 V252 M70 0 V252 M110 0 V252 M150 0 V252 M190 0 V252 M230 0 V252 M270 0 V252 M310 0 V252 M350 0 V252 M390 0 V252 M430 0 V252 M470 0 V252"/>
+    </g>
+    <path d="M20 126 C70 70 126 70 176 126 S282 182 332 126 S438 70 498 126" fill="none" stroke="url(#field)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M20 100 C70 44 126 44 176 100 S282 156 332 100 S438 44 498 100" fill="none" stroke="#4267ac" stroke-width="3" opacity="0.55"/>
+    <path d="M20 152 C70 96 126 96 176 152 S282 208 332 152 S438 96 498 152" fill="none" stroke="#c88a2b" stroke-width="3" opacity="0.55"/>
+    <rect x="210" y="44" width="74" height="164" rx="10" fill="#ffffff" opacity="0.72" stroke="#2c9c8f" stroke-width="3"/>
+    <rect x="292" y="62" width="36" height="128" rx="7" fill="#d8edf2" opacity="0.82" stroke="#4267ac" stroke-width="2"/>
+    <circle cx="248" cy="126" r="22" fill="#ffffff" opacity="0.8" stroke="#2c9c8f" stroke-width="3"/>
+  </g>
+  <text x="600" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#203246">FDTD Skill</text>
+  <text x="600" y="145" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#536575">Lumerical automation for wave optics scans and monitor analysis.</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#26364a">
+    <rect x="600" y="184" width="265" height="34" rx="17" fill="#ffffff" stroke="#bfd8ec"/><text x="620" y="207">lumapi and .lsf execution</text>
+    <rect x="600" y="232" width="265" height="34" rx="17" fill="#ffffff" stroke="#87d6cf"/><text x="620" y="255">Parameter scans and monitors</text>
+    <rect x="600" y="280" width="265" height="34" rx="17" fill="#ffffff" stroke="#f1c27b"/><text x="620" y="303">Transmission spectra analysis</text>
+  </g>
+</svg>

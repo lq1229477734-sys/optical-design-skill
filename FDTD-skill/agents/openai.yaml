@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lumerical FDTD Automation"
+  short_description: "Automate Lumerical FDTD scripting, scans, and result extraction."
+  default_prompt: "Use this skill to generate, run, debug, and analyze Lumerical FDTD automation scripts with lumapi or .lsf workflows."
