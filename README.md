@@ -1,6 +1,6 @@
 # Optical Design Skill Ecosystem
 
-![Optical Design Skill Ecosystem](./assets/readme/ecosystem-overview-imagen.png)
+![Optical Design Skill Ecosystem](./assets/readme/ecosystem-overview-agent-v2.png)
 
 A publication-style visual overview of the repository: optical requirements, simulation skills, and validation artifacts are organized into one traceable design workflow.
 
