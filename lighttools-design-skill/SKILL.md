@@ -34,6 +34,13 @@ Use this skill to turn an optical paper, processed surface dataset, or local Lig
 
 5. For scan workflows, keep model edits, simulation runs, and post-processing separate.
    - Patch text only for properties the COM database cannot expose safely.
+   - Avoid extra dots in generated `.lts` filenames used by LightTools COM.
+     A file such as `distance.bps.6.ec_t65.lts` can be parsed by LightTools as
+     the earlier `distance.bps.6.lts`; prefer names like
+     `distance_bps6_ec_t65.lts`.
+   - Before opening a model for a scan, issue `New`, then `Open` the resolved
+     path, and prove the current LightTools model by saving a proof copy or by
+     running a one-point scan whose hash differs from the baseline.
    - Use COM/JumpStart for geometry `LENGTH` sweeps and receiver mesh export.
    - Post-process exported TXT meshes with reusable scripts, not hand-edited spreadsheets.
    - Compare hashes when model edits appear to produce unchanged results.
