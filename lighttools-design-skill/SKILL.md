@@ -49,6 +49,7 @@ Use this skill to turn an optical paper, processed surface dataset, or local Lig
 - Read `references/freeform-surface-import.md` for importing two-surface freeform lenses from CSV data into FreeformSolid / Loft `.lts` models.
 - Read `references/paper-reproduction-lessons.md` for paper-specific modeling lessons: Figure 2 source/receiver reproduction, Figure 14 prism textures, DBHM stability, material inheritance, and model-debugging rules.
 - Read `references/distance-scan-workflow.md` for `distance.*.lts`, `colli1_lc_1` / `colli1_lc_2` sweeps, `ec_t` transmittance patches, `BLUReceiver` angular luminance mesh export, and 61x61 TXT post-processing.
+- Read `references/lighttools-com-open-verification.md` when patched `.lts` models opened through COM produce unchanged TXT hashes, when filenames contain extra dots, or when you need to prove the active LightTools model before a full sweep.
 - Read `references/LightTools_Macro_经验总结.md` when writing or debugging LightTools macros for parameter sweeps, object lookup by database keys, geometry/surface/pattern changes, receiver chart export, or macro-based simulation automation.
 
 ## Output Standard
