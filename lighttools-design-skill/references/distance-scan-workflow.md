@@ -9,11 +9,6 @@ Use this reference for local `distance.*.lts` models that scan `colli1_lc_1`,
   `distance.12.ec_t50.lts`.
 - Do not overwrite the original unless the user explicitly requests it.
 - Keep scan output folders separate from processed result folders.
-- When a patched model will be opened by LightTools COM, avoid additional dots
-  in the filename. LightTools may interpret
-  `distance.bps.6.ec_t65_work_verified.lts` as the earlier
-  `distance.bps.6.lts`, even when `Open` returns status `0`. Use a safe name
-  such as `distance_bps6_ec_t65_work_verified.lts`.
 
 ## Text Patches
 
@@ -53,21 +48,8 @@ LT-Cmd '\VConsole' | Out-Null
 LT-SetOption 'ShowDialogs' 0 | Out-Null
 LT-SetOption 'ShowFileDialogBox' 0 | Out-Null
 LT-SetOption 'ConfirmDeleteModel' 0 | Out-Null
-$newStatus = LT-Cmd 'New'
 $open = LT-Cmd ('Open ' + (LT-Str $model))
 ```
-
-Do not trust the requested model path or a TXT header written by the automation
-as proof that LightTools actually opened the intended file. For important scans,
-prove the opened model before the full sweep:
-
-1. Save a proof copy immediately after `Open`, then inspect the proof file for
-   the patched value, for example `ec_t setTransmittance: 0.65;`.
-2. Run one scan point and compare its TXT hash/numerical center value against
-   the old baseline. If the entire 61 x 61 mesh is identical to the old result,
-   stop and fix the opening/rerun workflow before launching the full scan.
-3. Record `new_status_before_open`, `open_status`, the model path, and the mesh
-   key in the scan log. A changed mesh key after `New` is a useful sanity check.
 
 ## Geometry Sweeps
 
@@ -152,26 +134,14 @@ If changing `ec_t` from 8% to 50% produces identical TXT hashes:
 
 - The file patch probably succeeded if `setTransmittance: 0.5;` is visible in
   the `ec_t` block.
-- First prove that LightTools opened the patched file. A common failure is a
-  dotted patched filename being resolved to the original `.lts` model.
-- Check the active opened model by saving a proof copy. If the proof copy still
-  contains the old transmittance, rename the patched file with underscores and
-  rerun.
-- If the proof copy is correct but the mesh is unchanged, then test whether the
-  `BLUReceiver Angular Luminance Mesh` is insensitive to that property by
-  setting `ec_t` to an extreme value such as `0` or `1` for one point.
+- The current `BLUReceiver Angular Luminance Mesh` may be insensitive to that
+  property even though `ec_t` is referenced by `2D_Pattern` zones.
+- Do an extreme test before assuming the script is wrong: set `ec_t`
+  transmittance to `0`, or temporarily change the `2D_Pattern` property to a
+  fully absorbing property, run one or two scan points, and compare hashes.
 
 Use file hashes to verify whether data actually changed:
 
 ```powershell
 Get-FileHash old.txt,new.txt -Algorithm SHA256
 ```
-
-Example from the `distance.bps.6` `ec_t` scan:
-
-- Bad patched name: `distance.bps.6.ec_t65_work_verified.lts`
-- Safe patched name: `distance_bps6_ec_t65_work_verified.lts`
-- Wrong one-point result was identical to the 1% baseline:
-  center luminance `190.182933`, max absolute mesh difference `0`.
-- Correct 65% one-point result after renaming and opening with `New`:
-  center luminance `240.468484`, nonzero mesh difference from the 1% baseline.
