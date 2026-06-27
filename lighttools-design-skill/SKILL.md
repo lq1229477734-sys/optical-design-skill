@@ -1,6 +1,6 @@
 ---
 name: lighttools-design-skill
-description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, distance/geometry sweeps, angular luminance meshes, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, run colli1_lc distance scans, export BLUReceiver angular luminance data, post-process LightTools mesh TXT files, debug LightTools model stability, version .lts outputs, or document validated optical-design workflows.
+description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, distance/geometry sweeps, angular or spatial luminance meshes, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, capture an edited active model, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, run colli1_lc distance or ray-trace-state scans, vary spatial luminance meter latitude, export BLUReceiver mesh data, post-process LightTools TXT files, debug model stability, version .lts outputs, or document validated optical-design workflows.
 ---
 
 # LightTools Design Skill
@@ -49,6 +49,7 @@ Use this skill to turn an optical paper, processed surface dataset, or local Lig
 - Read `references/freeform-surface-import.md` for importing two-surface freeform lenses from CSV data into FreeformSolid / Loft `.lts` models.
 - Read `references/paper-reproduction-lessons.md` for paper-specific modeling lessons: Figure 2 source/receiver reproduction, Figure 14 prism textures, DBHM stability, material inheritance, and model-debugging rules.
 - Read `references/distance-scan-workflow.md` for `distance.*.lts`, `colli1_lc_1` / `colli1_lc_2` sweeps, `ec_t` transmittance patches, `BLUReceiver` angular luminance mesh export, and 61x61 TXT post-processing.
+- Read `references/spatial-luminance-angle-workflow.md` for active-model snapshots, ECT transmittance and ray-trace-state audits, correct spatial luminance meter `Lat/Long` geometry, L=0/L=45 runs, and 600x600 mesh comparison.
 - Read `references/lighttools-com-open-verification.md` when patched `.lts` models opened through COM produce unchanged TXT hashes, when filenames contain extra dots, or when you need to prove the active LightTools model before a full sweep.
 - Read `references/LightTools_Macro_经验总结.md` when writing or debugging LightTools macros for parameter sweeps, object lookup by database keys, geometry/surface/pattern changes, receiver chart export, or macro-based simulation automation.
 
