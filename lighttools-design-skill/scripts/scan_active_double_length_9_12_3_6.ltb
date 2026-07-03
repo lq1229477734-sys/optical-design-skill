@@ -1,0 +1,107 @@
+REM LightTools in-application macro: current model double LENGTH sweep
+REM colli1_lc_2 = 9..12 um; colli1_lc_1 = 3..6 um; output lc2-lc1.txt
+
+ECHO OFF
+LTBSET UPDATE 1
+LTBSET DIALOG 0
+
+OUTDIR$ = "D:\tcl mars\lighttools\tunbale privacy\skem final\three hole\item 1\macro_lc2_9_12_lc1_3_6_angle_luminance"
+UNIT_SCALE = 0.001
+GEOM_FIELD$ = "LENGTH"
+SOLID1$ = "colli1_lc_1"
+SOLID2$ = "colli1_lc_2"
+PRIM$ = "CubePrimitive_1"
+VIEW3D$ = "\V3D"
+CHART_VIEW_CMD$ = "\VChart_BLUReceiver_正向_角度_亮度"
+DQ$ = CHR$(34)
+
+MkDirCmd$ = "cmd /c if not exist " + DQ$ + OUTDIR$ + DQ$
+MkDirCmd$ = MkDirCmd$ + " mkdir " + DQ$ + OUTDIR$ + DQ$
+SYSTEM MkDirCmd$
+
+Solids$ = LTDBLIST$("COMPONENTS[1]", "SOLID")
+Solid1Key$ = LTLISTBYNAME$(Solids$, SOLID1$)
+Solids2$ = LTDBLIST$("COMPONENTS[1]", "SOLID")
+Solid2Key$ = LTLISTBYNAME$(Solids2$, SOLID2$)
+
+IF Solid1Key$ = "" OR Solid2Key$ = "" THEN
+    PRINT "ERROR: cannot find colli1_lc_1 or colli1_lc_2"
+    LTBSET DIALOG 1
+    END
+END IF
+
+Prims1$ = LTDBLIST$(Solid1Key$, "CUBE_PRIMITIVE")
+Prim1Key$ = LTLISTBYNAME$(Prims1$, PRIM$)
+IF Prim1Key$ = "" THEN Prim1Key$ = LTLISTNEXT$(Prims1$)
+Prims2$ = LTDBLIST$(Solid2Key$, "CUBE_PRIMITIVE")
+Prim2Key$ = LTLISTBYNAME$(Prims2$, PRIM$)
+IF Prim2Key$ = "" THEN Prim2Key$ = LTLISTNEXT$(Prims2$)
+
+IF Prim1Key$ = "" OR Prim2Key$ = "" THEN
+    PRINT "ERROR: cannot find CubePrimitive_1"
+    LTBSET DIALOG 1
+    END
+END IF
+
+PRINT "Prim1 = "; Prim1Key$
+PRINT "Prim2 = "; Prim2Key$
+PRINT "Output = "; OUTDIR$
+
+FOR L1Um = 3 TO 6
+    L1Model = L1Um * UNIT_SCALE
+    IF L1Um = 3 THEN Label1$ = "3"
+    IF L1Um = 4 THEN Label1$ = "4"
+    IF L1Um = 5 THEN Label1$ = "5"
+    IF L1Um = 6 THEN Label1$ = "6"
+    Set1 = LTDBSET(Prim1Key$, GEOM_FIELD$, L1Model)
+
+    IF Set1 = 0 THEN
+        FOR L2Um = 9 TO 12
+            L2Model = L2Um * UNIT_SCALE
+            IF L2Um = 9 THEN Label2$ = "9"
+            IF L2Um = 10 THEN Label2$ = "10"
+            IF L2Um = 11 THEN Label2$ = "11"
+            IF L2Um = 12 THEN Label2$ = "12"
+            Set2 = LTDBSET(Prim2Key$, GEOM_FIELD$, L2Model)
+
+            IF Set2 = 0 THEN
+                FileBase$ = Label2$ + "um-" + Label1$ + "um"
+                OutBase$ = OUTDIR$ + "\" + FileBase$
+                PRINT "Simulate "; FileBase$
+                CmdStatus = LTCMD(VIEW3D$)
+                CmdStatus = LTCMD("Fit")
+                SimStatus = LTCMD("BeginAllSimulations")
+                PRINT "Simulation status = "; SimStatus
+
+                CmdStatus = LTCMD(CHART_VIEW_CMD$)
+                IF CmdStatus <> 0 THEN
+                    PRINT "ERROR: angular luminance chart command failed"
+                    PRINT "Open BLUReceiver angular luminance chart and update CHART_VIEW_CMD$"
+                    LTBSET DIALOG 1
+                    END
+                END IF
+
+                DelCmd$ = "cmd /c del /q " + DQ$ + OutBase$ + "*.txt" + DQ$
+                SYSTEM DelCmd$
+                ExportStatus = LTCMD("Export " + LTSTR$(OutBase$))
+
+                OldFile$ = OutBase$ + ".1.txt"
+                NewFile$ = FileBase$ + ".txt"
+                RenCmd$ = "cmd /c if exist " + DQ$ + OldFile$ + DQ$ + " ren "
+                RenCmd$ = RenCmd$ + DQ$ + OldFile$ + DQ$ + " " + DQ$ + NewFile$ + DQ$
+                SYSTEM RenCmd$
+                PRINT "Export status = "; ExportStatus
+                CmdStatus = LTCMD(VIEW3D$)
+            ELSE
+                PRINT "ERROR setting lc2 LENGTH, status = "; Set2
+            END IF
+        NEXT L2Um
+    ELSE
+        PRINT "ERROR setting lc1 LENGTH, status = "; Set1
+    END IF
+NEXT L1Um
+
+LTBSET UPDATE 1
+LTBSET DIALOG 1
+PRINT "Sweep finished."
+END

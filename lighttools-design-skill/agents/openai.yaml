@@ -1,4 +1,4 @@
 interface:
   display_name: "LightTools Design"
-  short_description: "Build, scan, and validate LightTools optical models."
-  default_prompt: "Use the LightTools design skill to build or modify a traceable optical model, capture active GUI edits, run distance or spatial-luminance angle scans, export receiver meshes, validate outputs, and preserve an audit trail."
+  short_description: "Build, attach, scan, and validate LightTools models."
+  default_prompt: "Use $lighttools-design-skill to attach to my active LightTools model, modify optical properties, run a validated scan, and process receiver meshes."

@@ -1,6 +1,6 @@
 ---
 name: lighttools-design-skill
-description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, distance/geometry sweeps, angular or spatial luminance meshes, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, capture an edited active model, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, run colli1_lc distance or ray-trace-state scans, vary spatial luminance meter latitude, export BLUReceiver mesh data, post-process LightTools TXT files, debug model stability, version .lts outputs, or document validated optical-design workflows.
+description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, distance/geometry sweeps, angular or spatial luminance meshes, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, attach to an already-open GUI session with unsaved edits, modify named optical-property percentages, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, run colli1_lc double-length or ray-trace-state scans, vary spatial luminance meter latitude, export BLUReceiver meshes, post-process LightTools TXT files, debug model stability, version .lts outputs, or document validated optical-design workflows.
 ---
 
 # LightTools Design Skill
@@ -25,6 +25,7 @@ Use this skill to turn an optical paper, processed surface dataset, or local Lig
    - LightTools COM and JumpStart interop strings often need `[ref]`.
    - Wrap `Cmd`, `Str`, `SetOption`, `DbList`, `ListSize`, `ListAtPos`, and `DbGet` before building complex scripts.
    - Disable dialogs before batch operations: `ShowDialogs`, `ShowFileDialogBox`, and `ConfirmDeleteModel`.
+   - For an already-open GUI model, auto-detect an attachable PID with `LTLocator.Locator` and verify target solids before changing state.
 
 4. Validate every saved model.
    - Open the generated `.lts` in LightTools and save a new versioned `.lts`.
@@ -52,6 +53,8 @@ Use this skill to turn an optical paper, processed surface dataset, or local Lig
 - Read `references/spatial-luminance-angle-workflow.md` for active-model snapshots, ECT transmittance and ray-trace-state audits, correct spatial luminance meter `Lat/Long` geometry, L=0/L=45 runs, and 600x600 mesh comparison.
 - Read `references/lighttools-com-open-verification.md` when patched `.lts` models opened through COM produce unchanged TXT hashes, when filenames contain extra dots, or when you need to prove the active LightTools model before a full sweep.
 - Read `references/LightTools_Macro_经验总结.md` when writing or debugging LightTools macros for parameter sweeps, object lookup by database keys, geometry/surface/pattern changes, receiver chart export, or macro-based simulation automation.
+
+- Read `references/active-session-double-length-workflow.md` for elevated active-session attachment, automatic PID discovery, ECT/`ec_t` percentage editing, `colli1_lc_1` / `colli1_lc_2` sweeps, standalone process3 processing, and numeric matrix validation.
 
 ## Output Standard
 
