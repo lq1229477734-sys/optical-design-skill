@@ -1,6 +1,6 @@
 ---
 name: lighttools-design-skill
-description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, distance/geometry sweeps, angular or spatial luminance meshes, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, attach to an already-open GUI session with unsaved edits, modify named optical-property percentages, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, run colli1_lc double-length or ray-trace-state scans, vary spatial luminance meter latitude, export BLUReceiver meshes, post-process LightTools TXT files, debug model stability, version .lts outputs, or document validated optical-design workflows.
+description: Reproduce optical-design papers and build Synopsys LightTools models from paper geometry, freeform surface data, LED arrays, receivers, thin films, prism textures, distance/geometry sweeps, angular or spatial luminance meshes, and simulation audits. Use when Codex needs to automate LightTools through COM or JumpStart .NET, attach to an already-open GUI session with unsaved edits, modify named optical-property percentages, import freeform CSV surfaces into .lts models, reproduce figures from optical papers, construct LED/source/receiver setups, create spatially colored disk/ring/sector sources for ray preview display, run colli1_lc double-length or ray-trace-state scans, vary spatial luminance meter latitude, export BLUReceiver meshes, post-process LightTools TXT files, debug model stability, version .lts outputs, or document validated optical-design workflows.
 ---
 
 # LightTools Design Skill
@@ -47,6 +47,7 @@ Use this skill to turn an optical paper, processed surface dataset, or local Lig
 ## Reference Selection
 
 - Read `references/lighttools-com-automation.md` for COM connection, JumpStart setup, sources, receivers, mesh export, and versioning patterns.
+- Read `references/spatially-colored-disk-sources.md` when a task asks for one LightTools disk/source face to have different visible ray colors by region, RGB-source-like behavior, colored ray preview/path display, sector/ring disk sources, or center-vs-outer source regions.
 - Read `references/freeform-surface-import.md` for importing two-surface freeform lenses from CSV data into FreeformSolid / Loft `.lts` models.
 - Read `references/paper-reproduction-lessons.md` for paper-specific modeling lessons: Figure 2 source/receiver reproduction, Figure 14 prism textures, DBHM stability, material inheritance, and model-debugging rules.
 - Read `references/distance-scan-workflow.md` for `distance.*.lts`, `colli1_lc_1` / `colli1_lc_2` sweeps, `ec_t` transmittance patches, `BLUReceiver` angular luminance mesh export, and 61x61 TXT post-processing.
