@@ -1,0 +1,4 @@
+interface:
+  display_name: "COMSOL Wave Optics"
+  short_description: "Build and validate COMSOL thin-film optical scans"
+  default_prompt: "Use $comsol-skill to build and validate a COMSOL LCP/RCP thin-film wavelength scan."
