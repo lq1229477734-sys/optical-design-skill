@@ -16,6 +16,7 @@ Modern optical design is powerful but fragmented. A single project may require:
 - LightTools illumination modeling and macro automation.
 - FDTD or RCWA-style electromagnetic simulation.
 - Transfer matrix methods for multilayer films, DBRs, anisotropic media, and liquid crystal stacks.
+- TechWiz LCD 3D for electro-optical liquid-crystal cells and GRIN lens design.
 - Python scripts for data processing, optimization, plotting, and validation.
 - Paper reproduction workflows that turn published figures and tables into working models.
 
@@ -78,6 +79,18 @@ This skill focuses on transfer-matrix modeling for isotropic and anisotropic mul
 - DBR, thin-film, liquid crystal, and rotated optical-axis modeling notes.
 - `pyllama`-related experience and reference material.
 
+### TechWiz LC Lens Skill
+
+Path: [`techwiz-lc-lens/`](./techwiz-lc-lens/)
+
+This skill captures a validated TechWiz LCD 3D v15 workflow for liquid-crystal cylindrical lenses. It includes:
+
+- Template-based generation of `.prj`, `.str`, `.elt`, `.stk`, and `.sdb` inputs without inventing undocumented structure formats.
+- Uniform-alignment, TN, single-electrode, and segmented-electrode design guidance with explicit polarization and unit conventions.
+- Voltage-sweep post-processing for OPD depth, phase, focal length, and normalized parabolic error.
+- Step-response extraction with 10–90% rise and 90–10% decay metrics.
+- Configuration validation, overwrite protection, binary-result checks, and benchmark cases from solved TechWiz projects.
+
 ## Design Principle
 
 The Optical Agent should produce results that are:
@@ -95,6 +108,7 @@ Contributions are welcome. Useful additions include:
 - Zemax skills for lens design, tolerancing, merit functions, and ZOS-API automation.
 - FDTD / RCWA skills for metasurfaces, gratings, nano-optics, and field extraction.
 - COMSOL or multiphysics coupling workflows.
+- TechWiz LCD electro-optical cell and liquid-crystal lens workflows.
 - More LightTools macro examples and validated `.lts` automation patterns.
 - Benchmark cases that compare analytical methods with commercial simulation outputs.
 - Paper reproduction workflows with clear assumptions and validation plots.
