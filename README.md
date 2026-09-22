@@ -22,6 +22,8 @@ Modern optical design is powerful but fragmented. A single project may require:
 
 This repository collects Codex skills that help an agent move across those boundaries with memory, structure, and engineering discipline.
 
+For the validated Windows workflow used to publish Codex-generated skills through GitHub Desktop, see [`GITHUB_DESKTOP_PUBLISHING_EXPERIENCE_CN.md`](./GITHUB_DESKTOP_PUBLISHING_EXPERIENCE_CN.md).
+
 ## Current Skills
 
 ### Zemax Skill
