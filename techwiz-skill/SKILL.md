@@ -1,9 +1,9 @@
 ---
-name: techwiz-lc-lens
+name: techwiz-skill
 description: Build, modify, troubleshoot, and post-process TechWiz LCD 3D v15 liquid-crystal cylindrical-lens projects, including GRIN/TN/segmented-electrode designs, voltage sweeps, OPD/focal-length/parabolic-error analysis, and step-response analysis. Use for TechWiz .prj/.str/.elt/.stk/.sdb projects and binary LC result files; do not use for unrelated optical solvers or generic LC theory alone.
 ---
 
-# TechWiz LC Lens
+# TechWiz Skill
 
 Produce a traceable TechWiz project, preserve the validated file-format conventions, and separate generated inputs from solver-produced evidence. Communicate in the user's language and always report physical quantities with units.
 

@@ -41,7 +41,7 @@ git diff --stat
 提交示例：
 
 ```powershell
-git add README.md techwiz-lc-lens
+git add README.md techwiz-skill
 git commit -m "Add validated TechWiz LC lens skill"
 ```
 

@@ -81,9 +81,9 @@ This skill focuses on transfer-matrix modeling for isotropic and anisotropic mul
 - DBR, thin-film, liquid crystal, and rotated optical-axis modeling notes.
 - `pyllama`-related experience and reference material.
 
-### TechWiz LC Lens Skill
+### TechWiz Skill
 
-Path: [`techwiz-lc-lens/`](./techwiz-lc-lens/)
+Path: [`techwiz-skill/`](./techwiz-skill/)
 
 This skill captures a validated TechWiz LCD 3D v15 workflow for liquid-crystal cylindrical lenses. It includes:
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TechWiz Skill"
+  short_description: "Build and analyze TechWiz liquid-crystal lens projects."
+  default_prompt: "Use $techwiz-skill to create, troubleshoot, or analyze a TechWiz LCD 3D liquid-crystal lens project."
